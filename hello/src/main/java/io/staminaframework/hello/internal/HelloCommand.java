@@ -27,7 +27,7 @@ import java.io.PrintStream;
  *
  * @author Stamina Framework developers
  */
-@Component(service = Command.class, property = CommandConstants.COMMAND_PROPERTY + "=hello")
+@Component(service = Command.class, property = CommandConstants.COMMAND + "=hello")
 public class HelloCommand implements Command {
     @Override
     public void execute(Command.Context ctx) throws Exception {
