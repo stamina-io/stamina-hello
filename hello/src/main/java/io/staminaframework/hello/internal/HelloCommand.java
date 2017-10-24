@@ -30,9 +30,10 @@ import java.io.PrintStream;
 @Component(service = Command.class, property = CommandConstants.COMMAND + "=hello")
 public class HelloCommand implements Command {
     @Override
-    public void execute(Command.Context ctx) throws Exception {
+    public boolean execute(Command.Context ctx) throws Exception {
         final String name = ctx.arguments().length == 0 ? "world" : String.join(" ", ctx.arguments());
         ctx.out().println("Hello " + name + "!");
+        return false;
     }
 
     @Override
