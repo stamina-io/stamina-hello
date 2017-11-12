@@ -31,6 +31,11 @@
     <packaging>pom</packaging>
     <url>http://staminaframework.io/stamina-hello</url>
 
+    <description>
+        Stamina Hello is the Hello World addon.
+        Check out this module to learn how to make an addon embedding bundles.
+    </description>
+
     <dependencies>
         <dependency>
             <groupId>io.staminaframework.hello</groupId>

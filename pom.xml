@@ -20,6 +20,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>io.staminaframework</groupId>
+        <artifactId>parent</artifactId>
+        <version>1-SNAPSHOT</version>
+    </parent>
+
     <groupId>io.staminaframework.hello</groupId>
     <artifactId>parent</artifactId>
     <version>0.1.0-SNAPSHOT</version>
@@ -51,8 +57,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.staminaframework</groupId>
-                <artifactId>io.staminaframework.starter</artifactId>
+                <groupId>io.staminaframework.runtime</groupId>
+                <artifactId>io.staminaframework.runtime.starter</artifactId>
                 <version>0.1.0-SNAPSHOT</version>
                 <type>pom</type>
             </dependency>
@@ -107,62 +113,6 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <repositories>
-        <repository>
-            <id>stamina</id>
-            <url>http://repo.staminaframework.io/releases</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>stamina-snapshots</id>
-            <url>http://repo.staminaframework.io/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>stamina</id>
-            <url>http://repo.staminaframework.io/releases</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>stamina-snapshots</id>
-            <url>http://repo.staminaframework.io/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <distributionManagement>
-        <repository>
-            <id>stamina</id>
-            <url>${env.STAMINA_REPO_RELEASES}</url>
-        </repository>
-        <snapshotRepository>
-            <id>stamina-snapshots</id>
-            <url>${env.STAMINA_REPO_SNAPSHOTS}</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <modules>
         <module>hello</module>

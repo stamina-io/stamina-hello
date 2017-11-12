@@ -16,8 +16,8 @@
 
 package io.staminaframework.hello.internal;
 
-import io.staminaframework.command.Command;
-import io.staminaframework.command.CommandConstants;
+import io.staminaframework.runtime.command.Command;
+import io.staminaframework.runtime.command.CommandConstants;
 import org.osgi.service.component.annotations.Component;
 
 import java.io.PrintStream;
